@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My Blogs",
+  "main": "index.js",
+  "repository": "https://github.com/iNuanfeng/blog.git",
+  "author": "暖风 <530039987@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "docsify serve docs"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.4.3"
+  }
+}
