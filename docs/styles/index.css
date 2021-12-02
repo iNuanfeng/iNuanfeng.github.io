@@ -12,3 +12,7 @@
   padding: 40px 15px 40px;
   position: relative;
 }
+
+section.cover .cover-main>p:last-child a:last-child:hover {
+  color: #fff;
+}
