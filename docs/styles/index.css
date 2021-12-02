@@ -1,11 +1,14 @@
-body {
-  
-}
-
 .sidebar-nav ul li {
   font-weight: bold;
 }
 
 .app-sub-sidebar li:before {
   display: none;
+}
+
+.markdown-section {
+  margin: 0 auto;
+  max-width: 850px;
+  padding: 40px 15px 40px;
+  position: relative;
 }
