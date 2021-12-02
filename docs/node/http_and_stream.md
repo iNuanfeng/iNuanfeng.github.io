@@ -18,7 +18,7 @@
 
 看了前面稍微了解 Node.js 的同学可能就要问了，流的作用不就是传递数据麽，也就是把一个地方数据拷贝到另一个地方，不用流也可以这样实现：
 
-``` javascript
+```
 var water = fs.readFileSync('a.txt', {encoding: 'utf8'});
 fs.writeFileSync('b.txt', water);
 ```
