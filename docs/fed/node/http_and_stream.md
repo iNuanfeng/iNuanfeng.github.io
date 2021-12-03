@@ -12,7 +12,7 @@
 
 假设楼上有一桶水，想倒往楼下的水桶。直接往下倒，肯定会洒出来，那么在两个水桶间加一根管子（pipe），就可以让楼上的水，逐渐地流到楼下的水桶内：
 
-![561794-20190506200834583-356545808.png](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/12/17/16f130624f2aebfa~tplv-t2oaga2asx-image.image)
+<img src="http://yun.inuanfeng.com/blog/KaoDII.jpg" alt="a1" style="zoom:50%;" />
 
 ### 1.2 为什么要使用 stream
 
@@ -22,10 +22,6 @@
 var water = fs.readFileSync('a.txt', {encoding: 'utf8'});
 fs.writeFileSync('b.txt', water);
 ```
-
-
-
-
 
 
 
@@ -100,7 +96,7 @@ server.listen(3000, function () {
 
 Koa 框架的本质是在 http 模块的上层，封装了自己的 ctx 对象，以及实现了洋葱模型的中间件体系。
 
-![image.png](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/12/17/16f130624f1596c7~tplv-t2oaga2asx-image.image)
+![a2](http://yun.inuanfeng.com/blog/2kawKc.jpg)
 
 ### 2.3 进一步了解 http 模块
 
@@ -147,7 +143,7 @@ server.listen(8124, () => {
 
 telnet 进行测试：
 
-![image.png](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/12/17/16f13062518b6524~tplv-t2oaga2asx-image.image)
+![a3](http://yun.inuanfeng.com/blog/5OTMCL.jpg)
 
 > 需要注意的是，net 模块创建出来的是一个 TCP 服务，而它监听接受到的数据，是一个 stream（流）
 
@@ -197,7 +193,7 @@ Cookie: UM_distinctid=16e3ab5c769669-0aa68fde01b9b3-37647e05-13c680-16e3ab5c76a1
 2. net 模块内部实际上是使用了 TCP 和 Stream 模块，绑定 TCP 端口后，将数据以流的形式，通过 connection 事件回调给 http 模块。
 3. http 模块接收到 stream 后，调用 httpParser 解析，回调给 request 事件。
 
-![image.png](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/12/17/16f13062523d9d31~tplv-t2oaga2asx-image.image)
+![a4](http://yun.inuanfeng.com/blog/gc34hM.jpg)
 
 - net 模块主要做的事情，就是启动 TCP 服务，将监听到的请求信息，通过 connection 回调给 http 模块。
 - http 模块主要做的就是在 connection 回调中解析报文数据，然后触发业务中的 request 回调，提供给开发者使用。

@@ -10,6 +10,8 @@
 
 我们先来看下奇货商城之前的开发流程：
 
+![](http://yun.inuanfeng.com/blog/CdAV4t.png)
+
 从上图可以看出，我们奇货前端开发之前存在的一些痛点：
 
 1. 前端在后端项目里面修改vm文件联调；
@@ -26,7 +28,7 @@
 
 先看一下改版后，奇货商城的开发流程：
 
-
+![2](http://yun.inuanfeng.com/blog/sMiOHt.png)
 
 从上图可以看到，我们经过改版后做到了：
 
@@ -188,7 +190,7 @@ new webpack.optimize.CommonsChunkPlugin({
 
 自动化部署是在打包服务器通过脚本实现的，先通过npm命令打包前端工程，然后将代码copy到后端工程中，最后打包后端项目，再发布。
 
-
+![3](http://yun.inuanfeng.com/blog/Obkwhq.png)
 
 ## 遇到的困难
 
@@ -209,11 +211,11 @@ webpack官方文档并没有如何引入公共html文件的说明，这一点是
 
 vm中有时需要直接引用后端的变量，如${cssUrl}，就像这样：
 
-
+![4](http://yun.inuanfeng.com/blog/CTw3sD.png)
 
 这时候webpack打包居然就报错了，报错了：
 
-
+![5](http://yun.inuanfeng.com/blog/dGvkDy.png)
 
 ### 原因排查
 
