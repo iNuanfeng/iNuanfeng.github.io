@@ -1,3 +1,7 @@
+main {
+  min-height: 100vh;
+}
+
 .sidebar-nav ul li {
   font-weight: bold;
 }
@@ -15,4 +19,50 @@
 
 section.cover .cover-main>p:last-child a:last-child:hover {
   color: #fff;
+}
+
+.sidebar-toggle {
+  width: 100px;
+}
+
+/** custom dom styles **/
+.sidebar-level {
+  position: fixed;
+  bottom: 8px;
+  left: 200px;
+  z-index: 100;
+}
+.sidebar-level-btn {
+  width: 30px;
+  height: 28px;
+  line-height: 28px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  opacity: 0.8;
+  font-size: 15px;
+  color: var(--theme-color,#42b983);
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+body.ready .sidebar-level {
+  display: block;
+}
+body.close .sidebar-level {
+  display: none;
+}
+
+@media screen and (max-width: 768px)  {
+  body.close .sidebar-toggle {
+    width: 100px;
+  }
+  body.ready .sidebar-level {
+    display: none;
+  }
+  body.close .sidebar-level {
+    display: block;
+  }
 }

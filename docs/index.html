@@ -5,10 +5,13 @@
   <meta charset="UTF-8">
   <title>Nuanfeng's Blog</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <link rel="dns-prefetch" href="//yun.tuia.cn" />
+  <link rel="stylesheet" href="http://yun.inuanfeng.com/blog/libs/vue.css">
+
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="icon" href="./styles/icon.png">
 </head>
 
 <body>
@@ -32,6 +35,9 @@
 
       themeColor: '#3F51B5',
 
+      auto2top: true,
+      notFoundPage: true,
+
       // 完整配置参数
       search: {
         noData: {
@@ -45,13 +51,58 @@
 
       requestHeaders: {
         'cache-control': 'max-age=0',
-      }
+      },
+
+      alias: {
+        '/fed/.*/_sidebar.md': '/fed/_sidebar.md',
+        '/principle/.*/_sidebar.md': '/principle/_sidebar.md',
+        '/skill/.*/_sidebar.md': '/skill/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
+      },
+
+      plugins: [
+        /**
+         * 增加侧边栏目录层级动态设置按钮
+         **/
+        function (hook, vm) {
+          var sidebarLevelSelect = [
+            `
+              <a class="sidebar-level-btn" id="J_SidebarLevel_2">L2</a>
+              <a class="sidebar-level-btn" id="J_SidebarLevel_3">L3</a>
+            `
+          ].join('');
+
+          function setSubMaxLevel(subMaxLevel) {
+            localStorage.setItem('docsify.sidebar.subMaxLevel', subMaxLevel)
+            window.$docsify.subMaxLevel = subMaxLevel
+            location.reload()
+          }
+
+          hook.mounted(function () {
+            window.$docsify.subMaxLevel = localStorage.getItem('docsify.sidebar.subMaxLevel') || window.$docsify
+              .subMaxLevel
+
+            // 初始化并第一次加载完成数据后调用，只触发一次，没有参数。
+            let div = document.createElement('div')
+            div.className = 'sidebar-level'
+            div.innerHTML = sidebarLevelSelect
+            document.querySelector('main').appendChild(div)
+            
+            document.querySelector('#J_SidebarLevel_2').addEventListener('click', function () {
+              setSubMaxLevel(2)
+            })
+
+            document.querySelector('#J_SidebarLevel_3').addEventListener('click', function () {
+              setSubMaxLevel(3)
+            })
+          });
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+  <script src="http://yun.inuanfeng.com/blog/libs/docsify@4.js"></script>
+  <script src="http://yun.inuanfeng.com/blog/libs/search.min.js"></script>
 </body>
 
 </html>

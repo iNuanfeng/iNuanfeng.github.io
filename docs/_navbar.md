@@ -1,5 +1,5 @@
 <!-- _navbar.md -->
 
-* [前端博文](fed/)
-
-* [分享记录](shares/)
+* [前端沉淀](fed/)
+* [原理解析](principle/)
+* [软技能](skill/)
