@@ -19,7 +19,7 @@
 
 cookie 是由浏览器支持，并且http请求会在请求头中携带 cookie 给服务器。也就是说，浏览器每次访问页面，服务器都能获取到这次访问者的 cookie 。
 
-![img](http://yun.inuanfeng.com/blog/PZL15t.jpg)
+![img](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/PZL15t.jpg)
 
 但对于 session 存在服务器哪里，以及服务器是通过什么对应到本次访问者的 session ，其实问过一些后端同学，解释得也都比较模糊。因为一般都是服务框架自带就有这功能，都是直接用。背后的原理是什么，并不一定会去关注。
 
@@ -50,7 +50,7 @@ koa-session：https://github.com/koajs/session
 
 先给出一个 koa-session 主要模块的脑图，可以先看个大概：
 
-![img](http://yun.inuanfeng.com/blog/evqxa2.jpg)
+![img](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/evqxa2.jpg)
 
 ### 屡一下流程
 
@@ -250,9 +250,9 @@ initFromCookie() {
 
 我们 `console.log` 一下 `json` 变量，来验证下：
 
-![img](http://yun.inuanfeng.com/blog/W0LftH.jpg)
+![img](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/W0LftH.jpg)
 
-![img](http://yun.inuanfeng.com/blog/ikEZQ5.jpg)
+![img](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/ikEZQ5.jpg)
 
 ##### initFromeExternal
 

@@ -90,7 +90,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 
 
-![image-20211210155607587](http://yun.inuanfeng.com/blog/Uhafjn.png)
+![image-20211210155607587](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/Uhafjn.png)
 
 
 
@@ -112,7 +112,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 上述三个观点提到的内容，基本表达了架构的核心目的：管理复杂性，效率最大化。以及架构的两个主要变化来源：一个是以改善软件质量为目的的内在结构性变化；另外一个是以满足客户需求为目的的外在功能性变化。无论是何种变化，在我看来架构都是在不断的判断和取舍，在业务需求和系统实现之间做权衡，从而来应对未来变化的不确定性，如下图可以比较粗浅直观的表达这种理解。
 
-![image-20211210155741354](http://yun.inuanfeng.com/blog/K65kk3.png)
+![image-20211210155741354](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/K65kk3.png)
 
 ### 要表达的是什么？
 
@@ -120,11 +120,11 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 在 EA 架构领域，有两种常见架构方法 RUP 和 TOGAF，这两个框架也是我们常常了解架构分类的两个维度。从个人的角度，我自己觉得 TOGAF 的分类方式更加广泛使用（如下右图）。
 
-![image-20211210155817479](http://yun.inuanfeng.com/blog/hl2Us1.png)
+![image-20211210155817479](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/hl2Us1.png)
 
 结合日常的业务开发，其实我们更多的是关注业务架构和应用架构，所以把上边的表达式进一步的拆解，在回答如何画好一张架构图之前，我们需要关注业务架构和系统架构，讨论清楚如何进行业务架构和系统架构。
 
-![image-20211210155834423](http://yun.inuanfeng.com/blog/yejvBZ.png)
+![image-20211210155834423](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/yejvBZ.png)
 
 
 
@@ -162,7 +162,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 这是两个比较容易陷入理论性的问题，我们跳出来从结果看过程。接下来通过已经产出的一些架构图来反向看这些架构图是如何产出的，同时来回答这两个问题。
 
-![image-20211210160404709](http://yun.inuanfeng.com/blog/mqAwDu.png)
+![image-20211210160404709](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/mqAwDu.png)
 
 ### 业务建模
 
@@ -170,7 +170,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 回到当下业务本身，对我而言也是全新的，在最初接触的时候凭仅有的行业背景去理解，结合了大量的文档阅读最终产出了如下图示的《业务核心流程图》和《业务功能模块图》。这两张图基本上就涵盖了所有的业务内容。左边的业务流程图得到了这个行业 20 多年从业经验专家认可，他认为这就是 20 多年所从事的业务内容。
 
-![image-20211210160424171](http://yun.inuanfeng.com/blog/jvC3eq.png)
+![image-20211210160424171](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/jvC3eq.png)
 
 回溯整个过程，特别是左侧的业务核心流程图，今天我们看这张流程图很容易构架起一个基本逻辑来，纵向是不同的业务角色和系统，横向是时间的推进，特别容易理解。但我想说最开始的理解和分析是极其耗时和压力极大的过程。这个过程中我所用的方法就是：
 
@@ -206,7 +206,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Z6bicxIx5naIBibiaCPNjJBiczoibTg9tj441Zy09xeCang0oicSjsp88t0hVxlvKsbicCvkaIvbLAsiaPgYWmzbf2NjWQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![image-20211213161034736](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/8Fl6lg.png)
 
 
 
@@ -222,7 +222,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![image-20211213161059147](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/YGiLnM.png)
 
 
 
@@ -236,7 +236,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 总结一下业务建模（如下图），通过上述三个主要的过程，我们基本可以产出一些业务架构的大图、框图、流程图、用例图等等，是什么样的图并不重要，重要的是这个图面对的是谁？主要用来做什么？我后边也会讲到画图角度的问题。从我们目前的业务场景上看，业务架构图的核心目的是统一共识、减少沟通成本，无论是项目中的哪个角色大家都能讲一样的话，描述一样的事情。这就是建立对话能力和对话语境，特别是有大量外部客户的时候，一方面体现我们自己专业性很重要，另外一方面这种与客户对话的能力更重要，这也是上文中提到为什么要尽可能用原汁原味的文字去呈现一张图的目的。
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![image-20211213161115996](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/zi6BFi.png)
 
 ### 系统建模
 
@@ -246,15 +246,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 抛开具体的时序图、状态图不谈，简单看一下如下几个维度的架构图：
 
-
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Z6bicxIx5naIBibiaCPNjJBiczoibTg9tj441D2HtzeWdI0YKqP8qdDJwA1PxaI7FlGwzUxwBbRGKShoNzAibbBiaKfiag/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-图片源于网络，为示意图，侵删
-
-
-
-
+![image-20211213161145029](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/nmNobY.png)
 
 
 
@@ -300,11 +292,7 @@ ISO/IEC 42010:20072 中对架构有如下定义：
 
 从这个概念理解，和我们面向对象万物兼对象的理解是基本一致的。所以实体的抽取也可以借鉴对象分析的方法：独立、可抽象、有层次性、在单个层次上又具备原子性。如下图是《Thinking in UML》中关于对象的分析方法。
 
-
-
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
-
-
+![image-20211213161207429](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/P4iseD.png)
 
 - 用例分析的方法
 
@@ -400,9 +388,7 @@ Haskell 语言的设计者之一 Paul Hudak 曾说过一句略带夸张的话：
 
 生活中我们常常说“我的观点是…”，其实这里的“观点”就是一个角度问题，从一定的立场或角度出发，对事物或问题所持的看法。以生活中的常见的实物来说（如下图），我们是否能快速的说出其中的相同点和不同点。
 
-
-
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![image-20211213161226310](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/xhaRvd.png)
 
 
 
@@ -426,7 +412,7 @@ Haskell 语言的设计者之一 Paul Hudak 曾说过一句略带夸张的话：
 
 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Z6bicxIx5naIBibiaCPNjJBiczoibTg9tj441ey998ibcXSibX4uHxvsUDG54RcwTjdbmwLjL3wibmqJ358b3cBUsTZzzQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![image-20211213161237150](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/v6HYuJ.png)
 
 
 
@@ -454,7 +440,7 @@ Wikipedia 关于抽象的定义中有一个关于报纸的例子：
 
 
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![image-20211213161252150](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/NAGjgb.png)
 
 
 
@@ -496,9 +482,7 @@ Wikipedia 关于抽象的定义中有一个关于报纸的例子：
 
 以现场娱乐行业为例，如下这张图包含了最高抽象层次下业务的全生命周期，这个抽象层次下的主体是什么，我的理解是票，项目生产的结果是票，分销或电商服务是对票的销售，现场是对票的核验，至此以票为核心实体的生命周期结束。
 
-
-
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![image-20211213161303267](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/Io4xmJ.png)
 
 
 
@@ -588,9 +572,7 @@ Wikipedia 关于抽象的定义中有一个关于报纸的例子：
 
 下面这张图来自于《Thinking in UML》，我觉得这个循环的过程可以表达上面这四个点，供大家参考。
 
-
-
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![image-20211213161331767](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/d1waHv.png)
 
 
 
@@ -742,11 +724,7 @@ A picture is worth a thousand words （一图胜千言），从 Why 层面讲，
 
 这是来自于阿白老师的文章《架构师到底是做什么的？》，越是琢磨，越觉得深以为然。其中提到了好的架构师的画像和不好的画像，如下图，与大家共勉。
 
-
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/Z6bicxIx5naIBibiaCPNjJBiczoibTg9tj441mjIueOGQkrGYyDviaC9y8ZIibfJ94gHRPGADdkHXiab75CVTFGDEicUib6g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-
+![image-20211213161351441](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/ztaZ2h.png)
 
 从我个人的成长经历看，架构师很重要的一点要学会“权衡”，既要兼顾当下痛点也要符合未来一定时间的发展，既要保留未来的可扩展性也要避免过度设计。选择什么样的时间节点、什么样的业务场景以及什么样的架构迭代策略至关重要，这些决策的关键在于判断和取舍，需要结合深刻的业务思考乃至组织架构去做权衡落地。一点点不算经验的经验：
 
@@ -782,11 +760,7 @@ A picture is worth a thousand words （一图胜千言），从 Why 层面讲，
 
 希望这篇文章对大家有帮助，附上最初在考虑这个主题时的构思过程及思考路径，供大家参考。
 
-
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/Z6bicxIx5naIBibiaCPNjJBiczoibTg9tj441SwxEIGeOyYpp1rjFvE280Hy8Z2BYfF89DliaO8CPJKxO91GnQ4Ymcqg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-
+![image-20211213161410898](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/OR20XT.png)
 
 
 

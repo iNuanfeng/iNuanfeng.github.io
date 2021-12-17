@@ -148,7 +148,7 @@ ToPrimitive([]) == 0
 
 ## [#](https://yuchengkai.cn/docs/frontend/#原型)原型
 
-![top](http://yun.inuanfeng.com/blog/gu8nhp.jpg)
+![top](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/gu8nhp.jpg)
 
 每个函数都有 `prototype` 属性，除了 `Function.prototype.bind()`，该属性指向原型。
 

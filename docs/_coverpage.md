@@ -1,4 +1,4 @@
-![logo](https://avatars.githubusercontent.com/u/10986769?s=40&v=4)
+![logo](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/5DOQMN.png)
 
 # Nuanfeng's Blog
 

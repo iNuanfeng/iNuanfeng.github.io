@@ -24,6 +24,16 @@
 
 
 
+## 难点有哪些
+
+业务挑战：用户是谁，解决什么问题，用什么方式解决，业务核心逻辑，业务产品功能
+
+技术挑战：系统架构与抽象，实时预览，跨组件交互，异步组件，性能保障
+
+再进一步：版本与风险管理，组件管理与云开发，跨端，性能的进一步优化
+
+
+
 ## 从哪里入手
 
 > 再复杂的项目，也遵循 `业务-概念-架构-设计` 的流程。（https://zhuanlan.zhihu.com/p/266687671）
@@ -57,7 +67,7 @@
 
 ### 做系统架构的标准流程
 
-<img src="http://yun.inuanfeng.com/blog/NJcC29.png" alt="image-20211209103755217" style="zoom:50%;" />
+<img src="https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/NJcC29.png" alt="image-20211209103755217" style="zoom:50%;" />
 
 
 
@@ -74,7 +84,7 @@
 
 > 可以类比为 Tasla 的各类配件：
 
-<img src="http://yun.inuanfeng.com/blog/MUPwFx.png" alt="image-20211208165811300" style="zoom:50%;" />
+<img src="https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/MUPwFx.png" alt="image-20211208165811300" style="zoom:50%;" />
 
 在搭建系统中，我们将物料分为：
 
