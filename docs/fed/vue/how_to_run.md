@@ -15,6 +15,13 @@
 
 
 
+- 一、使用 monorepo管理源码
+- 二、使用 TypeScript 开发源码
+- 三、性能优化 1.源码体积优化 2.数据劫持优化Proxy 3.编译优化 4.diff算法优化
+- 四、语法 API 优化：Composition API
+
+
+
 想要了对 `Vue3` 的底层核心，直接读源码是最直接的。而且 `Vue3` 对做了非常好的模块划分，源码易读易维护。本文主要分析 `Vue3` 的核心渲染逻辑。
 
 
@@ -90,7 +97,7 @@ dist
 │   ├── size-check                # 打包体积检测
 │   ├── template-explorer         # 代码编译预览
 │   ├── vue                       # ★入口
-│   └── vue-compat                # 兼容相关
+│   └── vue-compat                # Vue2升级相关
 ├── scripts
 └── test-dts
 ```
@@ -103,7 +110,7 @@ dist
 let entryFile = /runtime$/.test(format) ? `src/runtime.ts` : `src/index.ts`
 ```
 
-入口文件分两种，一种是完整版：`/packages/vue/src/index.ts`，另一种是 `runtime` 版本：`/packages/vue/src/runntime.ts`。
+入口文件分两种，一种是完整版：`/packages/vue/src/index.ts`，另一种是 `runtime` 版本：`/packages/vue/src/runtime.ts`。
 
 
 
@@ -130,15 +137,55 @@ http://localhost:5000/packages/vue/examples/classic/todomvc
 
 
 
-## 渲染流程
+## 正式开始前
 
-假设我们只是熟练使用框架 api 的程度，这时候我们拿到了入口，如何梳理出主链路，以及分支链路？
+源码非常多，从头开始看影响效率，而且容易一头扎进细节。首先，明确你读源码的目的是什么？是屡清核心链路，还是研究某一块细节。类似设计一个框架或模块，首先得有需求，也就是功能，然后再有设计和实现。
 
-一行行读代码？行不通。
+相对应的，我们阅读源码前，可以先使用这个框架，并且读完相关的文档，看看有哪些功能，有没有一些设计思路介绍。然后自己先梳理出想要了解的思维脑图，以及流程图，再带着原先的问题，进入源码，这样我们就可以更加有方向性。
 
-根据功能维度 先读文档 和 仓库内的 readme？也许可以。
 
-根据内部模块划分 看仓库代码？也许可以。
+
+### 核心模块结构是怎么样的？
+
+我们这次希望剖析 `Vue3` 的核心渲染逻辑，根据功能和官方文档介绍，我们梳理出以下功能脑图：
+
+以及根据官方文档介绍，梳理出以下链路图：
+
+梳理模块依赖关系：
+
+这里有个小方法，通过 vscode 全局查找 packages 里的包名，排除以下非核心相关的文件：`*.md, *.json, __tests__, *.js, vue-compat/, size-check/`
+
+
+
+### 全局变量 Vue 是从哪里来的？
+
+我们在使用 Vue3 的时候会发现，`import vue from 'vue'`， 输出的并不是 Vue 全局变量，但 vue.global.js 里面有全局变量 Vue。这是为什么呢？原因是 Vue3 的源码中已经不会将 vue 放到全局变量上，它是导出一个对象，里面包含了 `createApp, nextTick` 等等所有的 @vue/runtime-dom 和 @vue/runtime-core 下的方法。至于 vue.global.js 里面为什么有全局变量 `Vue`，那是通过 rollup 打包生成的，具体是通过 `packages/vue/packages` 下的 `buildOptions.name` 进行定义的。
+
+
+
+<!--假设我们只是熟练使用框架 api 的程度，这时候我们拿到了入口，如何梳理出主链路，以及分支链路？-->
+
+<!--一行行读代码？行不通。-->
+
+<!--根据功能维度 先读文档 和 仓库内的 readme？也许可以。-->
+
+<!--根据内部模块划分 看仓库代码？也许可以。-->
+
+
+
+## 开始阅读
+
+现在我们有了入口，有了大致的模块概念，接下来让我们从 Vue3 初始化开始，在源码中探索答案。来看看 Vue3.x 从初始化到渲染到底发生了什么？
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -150,3 +197,16 @@ http://localhost:5000/packages/vue/examples/classic/todomvc
 
 ## 写在最后
 
+
+
+本文是从整体视角解读了 Vue，归类了总结；
+
+看完这边，我们学习到了xxxxx。
+
+
+
+后面的 Vue 系列文章，我们会带着一个类型的几个问题，分别解读各个部分的源码；
+
+包括响应式，异步，组件，api，composition api，等等；
+
+另外也包括 Vue 之外的一些值得学习的地方，如何管理开源项目，如何做单元测试，如何做monorepo等等，当然这部分会放在其他的类目下面。
