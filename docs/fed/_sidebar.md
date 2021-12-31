@@ -18,6 +18,7 @@
 * JS 进阶
   * [js 基础知识](fed/js/basic)
 * CSS 世界
+  * [FLIP: 让动画变得更简单](fed/css/flip_animation)
 * 富应用
   * <!--[如何实现一个 xmind](#)-->
   * <!--[如何实现一个 excel](https://zhuanlan.zhihu.com/p/340423350?utm_source=wechat_session&utm_medium=social&utm_oi=41409952350208)-->

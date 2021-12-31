@@ -25,7 +25,6 @@
 想要了对 `Vue3` 的底层核心，直接读源码是最直接的。而且 `Vue3` 对做了非常好的模块划分，源码易读易维护。本文主要分析 `Vue3` 的核心渲染逻辑。
 
 
-
 ## 前期准备
 
 > 要阅读源码，这几件事是必备的：下载并编译源码，了解模块划分和入口，方便的调试手段
@@ -155,7 +154,7 @@ http://localhost:5000/packages/vue/examples/classic/todomvc
 
 这里有个小方法，通过 vscode 全局查找 packages 里的包名，排除以下非核心相关的文件：`*.md, *.json, __tests__, *.js, vue-compat/, size-check/`
 
-
+![lifecycle](https://kxf-oss.oss-cn-hangzhou.aliyuncs.com/blog/q4pjI2.png)
 
 ### 全局变量 Vue 是从哪里来的？
 
@@ -210,3 +209,7 @@ http://localhost:5000/packages/vue/examples/classic/todomvc
 包括响应式，异步，组件，api，composition api，等等；
 
 另外也包括 Vue 之外的一些值得学习的地方，如何管理开源项目，如何做单元测试，如何做monorepo等等，当然这部分会放在其他的类目下面。
+
+
+
+带着问题看源码，从上到下，从大到小，吃透核心功能，学习框架扩展知识。
